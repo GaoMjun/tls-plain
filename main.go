@@ -27,9 +27,9 @@ var keyLogWriter io.Writer
 
 func main() {
 	addr := flag.String("l", "127.0.0.1:8080", "http proxy server address, default 127.0.0.1:8080")
-	capath := flag.String("ca", "", "certificate file path")
-	pkpath := flag.String("pk", "", "private key file path")
-	sslkeylogfile := flag.String("sslkeylog", "", "sslkeylog file path")
+	capath := flag.String("ca", "htun.cer", "certificate file path")
+	pkpath := flag.String("pk", "htun.key", "private key file path")
+	sslkeylogfile := flag.String("sslkeylog", "sslkey.log", "sslkeylog file path")
 	flag.Parse()
 
 	var (
